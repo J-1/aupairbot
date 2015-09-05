@@ -1,14 +1,11 @@
-html {
+/*basic reset*/
+* {margin: 0; padding: 0;}
+/*adding a black bg to the body to make things clearer*/
+
+canvas { position:absolute; height: 100%; width:100%; z-index:-10; 
   background: url(../images/chillilillo.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-}
-
-body {
-  font-family: sans-serif;
-  font-size:18px;
-  font-weight: 400;
-  color: rgba(230,200,130,.6);
 }
