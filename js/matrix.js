@@ -10,8 +10,8 @@ var chinese = "田由甲申甴电甶男甸甹町画甼甽甾甿畀畁畂畃畄�
 //converting the string into an array of single characters
 chinese = chinese.split("");
 
-var font_size = 10;
-var columns = matrix_canvas.width; //number of columns for the rain
+var font_size = 16;
+var columns = matrix_canvas.width*font_size; //number of columns for the rain
 //an array of drops - one per column
 var drops = [];
 //x below is the x coordinate
@@ -30,7 +30,7 @@ function draw()
 	ctx.fillStyle = "rgba(0, 0, 0, .03)";
 	ctx.fillRect(0, 0, matrix_canvas.width, matrix_canvas.height);
 
-	ctx.fillStyle = "rgba(180, 0, 0, .5)"; //green text
+	ctx.fillStyle = "rgba(0, 180, 0, .5)"; //green text
 	ctx.font = font_size + "px arial";
 	//looping over drops
 	for(var i = 0; i < drops.length; i++)
@@ -38,7 +38,7 @@ function draw()
 		//a random chinese character to print
 		var text = chinese[Math.floor(Math.random()*chinese.length)];
 		//x = i*font_size, y = value of drops[i]*font_size
-		ctx.fillText(text, i*font_size, drops[i]*font_size/2);
+		ctx.fillText(text, i*font_size, drops[i]*font_size);
 
 		//sending the drop back to the top randomly after it has crossed the screen
 		//adding a randomness to the reset to make the drops scattered on the Y axis
