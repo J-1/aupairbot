@@ -27,10 +27,10 @@ function draw()
 
 	//Black BG for the canvas
 	//translucent BG to show trail
-	ctx.fillStyle = "rgba(0, 0, 0, .03)";
+	ctx.fillStyle = "rgba(0, 0, 0, .04)";
 	ctx.fillRect(0, 0, matrix_canvas.width, matrix_canvas.height);
 
-	ctx.fillStyle = "rgba(0, 180, 0, .5)"; //green text
+	ctx.fillStyle = "rgba(0, 180, 0, 1)"; //green text
 	ctx.font = font_size + "px arial";
 	//looping over drops
 	for(var i = 0; i < drops.length; i++)
